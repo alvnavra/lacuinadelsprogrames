@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+    <!-- Hero Section-->
+    <section style="background: url({% static 'img/olive-oil-1412361_1920.jpg' %}); background-size: cover; background-position: center center" class="hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <h1>La Cuina dels Programes</h1><a href="#" class="hero-link">Descobriu mes</a>
+          </div>
+        </div><a href=".intro" class="continue link-scroll"><i class="fa fa-long-arrow-down"></i> Baixar</a>
+      </div>
+    </section>
+    <!-- Intro Section-->
+    <section class="intro">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <!--<h2 class="h3">La cuina dels programes</h2>-->
+            <p class="text-big">
+            Sempre m'ha semblat, que contrariament al que sol pensar la inmensa majoria de la gent, programar 
+            no es una tasca complexa. De fet, <strong>Si saps fregir un ou, ja tens tot el talent que es necesita per saber programar</strong>
+            </p>
+            <p class="text-big">
+              Això si, com a la cuina, programar requereix bastant de perserverancia. A vegades et passes hores per aconseguir que un programa
+              o una pàgina web es comporti com tu vols. Però quan aconsegueixes la sensació es indescriptible. 
+            </p>
+            <p class="text-big">
+              Però per evitar que t'hagis de passar les minimes hores imprescindibles davant de la pantalla, neix aquest blog. Per que, com
+              deia Joe Cocker, tot es mes fàcil <strong><i>"with a little help of my friends"</i></strong>
+            </p>
+            <p class="text-big">
+              Em dic Rafael Alvarez i per qualsevol cosa que necessiteu, només cal que us doneu d'alta i dexeu els vostres comentaris i els
+              vostres dubtes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="featured-posts no-padding-top">
+      <div class="container">
+        <!-- Post-->
+        {% for obj in object_list%}
+        <div class="row d-flex align-items-stretch">
+            {% if forloop.counter|divisibleby:2 %}
+            <div class="image col-lg-5"><img src="{{obj.thumbnal.url}}" alt="..." class="img-card"></div>
+            {% endif %}
+          <div class="text col-lg-7">
+            <div class="text-inner d-flex align-items-center">
+              <div class="content">
+                <header class="post-header">
+                  <div class="category">
+                  {% for cat in obj.categories.all %}
+                    <a href="#">{{cat}}</a>
+                  {% endfor %}
+                  </div>
+                  <a href="{{obj.get_absolute_url}}">
+                    <h2 class="h4">{{obj.title}}</h2>
+                  </a>
+                </header>
+                <p>{{obj.overview}}</p>
+                <footer class="post-footer d-flex align-items-center"><a href="#" class="author d-flex align-items-center flex-wrap">
+                    <div class="avatar"><img src="{{obj.author.profile_picture.url}}" alt="..." class="img-fluid"></div>
+                    <div class="title"><span>{{obj.author}}</span></div></a>
+                  <div class="date"><i class="icon-clock"></i> {{obj.timestamp|timesince}} ago</div>
+                  <div class="comments"><i class="icon-comment"></i>{{obj.comments_count}}</div>
+                </footer>
+              </div>
+            </div>
+          </div>
+            {% if not forloop.counter|divisibleby:2 %}
+            <div class="image col-lg-5"><img src="{{obj.thumbnal.url}}" alt="..." class="img-card"></div>
+            {% endif %}
+        </div>
+        {% endfor %}        
+      </div>
+    </section>
+    <!-- Divider Section-->
+    <section style="background: url({% static 'img/divider-bg.jpg' %}); background-size: cover; background-position: center bottom" class="divider">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2>Aquest blog està en permanent construcció. El que significa que qualsevol sugeriment o crítica constructiva serà sempre benvinguda</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Latest Posts -->
+    <section class="latest-posts"> 
+      <div class="container">
+        <header> 
+          <h2>L'ùltim del blog</h2>
+          <p class="text-big">Aquí tindreu sempre els ultims posts que es vagin publicant</p>
+        </header>
+        <div class="row">
+          {% for obj in latest%}
+          <div class="post col-md-4">
+            <div class="post-thumbnail"><a href="{{obj.get_absolute_url}}"><img src="{{obj.thumbnal.url}}" alt="..." class="img-fluid img-card"></a></div>
+            <div class="post-details">
+              <div class="post-meta d-flex justify-content-between">
+                <div class="date">{{obj.timestamp}}</div>
+                <div class="category">
+                 {% for cat in obj.categories.all%}
+                  <a href="#">{{cat}}</a>
+                 {% endfor %}
+                </div>
+              </div><a href="{{obj.get_absolute_url}}">
+                <h3 class="h4">{{obj.title}}</h3></a>
+              <p class="text-muted">{{obj.overview}}</p>
+            </div>            
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+    <!-- Newsletter Section-->
+    <section class="newsletter no-padding-top">    
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Suscriu-te a les news letters</h2>
+            <p class="text-big">Apunta't aquí per rebre les ultimes novetats de la cuina dels programes</p>
+          </div>
+          <div class="col-md-8">
+            <div class="form-holder">
+              <form action="." method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                  <input type="email" name="email" id="email" placeholder="Type your email address">
+                  <button type="submit" class="submit">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Gallery Section-->
+    <section class="gallery no-padding">    
+      <div class="row">
+        <div class="mix col-lg-3 col-md-3 col-sm-6">
+          <div class="item"><a href="img/gallery-1.jpg" data-fancybox="gallery" class="image"><img src="{% static 'img/gallery-1.jpg'%}" alt="..." class="img-fluid">
+              <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
+        </div>
+        <div class="mix col-lg-3 col-md-3 col-sm-6">
+          <div class="item"><a href="img/gallery-2.jpg" data-fancybox="gallery" class="image"><img src="{% static 'img/gallery-2.jpg'%}" alt="..." class="img-fluid">
+              <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
+        </div>
+        <div class="mix col-lg-3 col-md-3 col-sm-6">
+          <div class="item"><a href="img/gallery-3.jpg" data-fancybox="gallery" class="image"><img src="{% static 'img/gallery-3.jpg'%}" alt="..." class="img-fluid">
+              <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
+        </div>
+        <div class="mix col-lg-3 col-md-3 col-sm-6">
+          <div class="item"><a href="img/gallery-4.jpg" data-fancybox="gallery" class="image"><img src="{% static 'img/gallery-4.jpg'%}" alt="..." class="img-fluid">
+              <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
+        </div>
+      </div>
+    </section>
+      
+  {% endblock content %}
