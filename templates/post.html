@@ -18,10 +18,12 @@
                       <a href="#">{{cat}}</a>
                     {% endfor %}
                     </div>
+                    {% if request.user.is_authenticated %}                
                     <div>
                       <a href="{% url 'post-update' id=post.id%}">Update</a>
                       <a href="{% url 'post-delete' id=post.id%}">Delete</a>
                     </div>
+                    {% endif %}
                 </div><a href="{{post.get_absolute_url}}">
                 <h1>{{post.title}}<i class="fa fa-bookmark-o"></i></h1>
                 <div class="post-footer d-flex align-items-center flex-column flex-sm-row"><a href="#" class="author d-flex align-items-center flex-wrap">
