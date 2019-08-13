@@ -11,7 +11,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '7zneg#6x=ev^5f2p91b-4+&%^$b+=p1mx4enklwc17_-h=(m1%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 #DEBUG = True
 ALLOWED_HOSTS = ['www.lacuinadelsprogrames.cat','alvnavra.pythonanywhere.com','localhost']
 
@@ -28,8 +28,11 @@ INSTALLED_APPS = [
     'posts',
     'marketing',
     'tinymce',
-    'filebrowser'
+    'filebrowser',
+    'crispy_forms'
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -118,8 +121,8 @@ MEDIA_ROOT = os.path.join(VENV_PATH, 'media_root')
 
 #Tinymce
 TINYMCE_DEFAULT_CONFIG = {
-    'height': 360,
-    'width': 1120,
+    'height': 2,
+    #'width': 1120,
     'cleanup_on_startup': True,
     'custom_undo_redo_levels': 20,
     'selector': 'textarea',

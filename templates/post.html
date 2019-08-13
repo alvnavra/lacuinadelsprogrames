@@ -13,11 +13,17 @@
               <div class="post-details">
                 <div class="post-meta d-flex justify-content-between">
                   <!--<div class="date meta-last">20 May | 2016</div>-->
-                  {% for cat in post.categories.all %}
-                    <div class="category"><a href="#">{{cat}}</a></div>
-                  {% endfor %}
+                  <div class="category">
+                    {% for cat in post.categories.all %}
+                      <a href="#">{{cat}}</a>
+                    {% endfor %}
+                    </div>
+                    <div>
+                      <a href="{% url 'post-update' id=post.id%}">Update</a>
+                      <a href="{% url 'post-delete' id=post.id%}">Delete</a>
+                    </div>
                 </div><a href="{{post.get_absolute_url}}">
-                <h1>{{post.title}}<a href="#"><i class="fa fa-bookmark-o"></i></a></h1>
+                <h1>{{post.title}}<i class="fa fa-bookmark-o"></i></h1>
                 <div class="post-footer d-flex align-items-center flex-column flex-sm-row"><a href="#" class="author d-flex align-items-center flex-wrap">
                     <div class="avatar"><img src="{{post.author.profile_picture.url}}" alt="..." class="img-fluid"></div>
                     <div class="title"><span>{{post.author.user.username}}</span></div></a>
@@ -30,7 +36,7 @@
                 <div class="post-body">
                   {{post.content|safe}}
                 </div>
-                <div class="post-tags"><a href="#" class="tag">#Business</a><a href="#" class="tag">#Tricks</a><a href="#" class="tag">#Financial</a><a href="#" class="tag">#Economy</a></div>
+                
                 <div class="posts-nav d-flex justify-content-between align-items-stretch flex-column flex-md-row">
                   {% if post.previous_post %}
                   <a href="{{post.previous_post.get_absolute_url}}" class="prev-post text-left d-flex align-items-center">
