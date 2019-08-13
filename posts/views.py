@@ -76,19 +76,19 @@ def post(request, id):
     post = get_object_or_404(Post, id=id)
     most_recent = most_recent = Post.objects.filter(featured=True).order_by('-timestamp')[:3]
     category_count = get_category_count()
-    form = CommentForm(request.POST or None)
+    comment_form = CommentForm(request.POST or None)
     if request.method == 'POST':
-        if form.is_valid():
-            form.instance.user = request.user
-            form.instance.post = post
-            form.save()
+        if comment_form.is_valid():
+            comment_form.instance.user = request.user
+            comment_form.instance.post = post
+            comment_form.save()
             return redirect(reverse("post-detail", kwargs={
                 'id':post.id
             }))
 
             
     context = {
-        'form':form,
+        'comment_form':comment_form,
         'post':post,
         "most_recent": most_recent,
         "category_count":category_count,
@@ -117,7 +117,7 @@ def post_update(request, id):
     title = 'Update'
     post = get_object_or_404(Post, id=id)
     form = PostForm(request.POST or None, request.FILES or None, instance=post)
-    author = get_author(request.user)
+    author = get_author(request.user)    
     if request.method == 'POST':
         if form.is_valid():
             form.instance.author = author
@@ -130,6 +130,7 @@ def post_update(request, id):
         'form':form
     }
     return render(request, "post_create.html", context)
+
 
 
 
