@@ -12,10 +12,11 @@
               <div class="post-thumbnail"><img src="{{post.thumbnal.url}}" alt="..." class="img-fluid img-card"></div>
               <div class="post-details">
                 <div class="post-meta d-flex justify-content-between">
-                {% for cat in post.categories.all  %}
-                  <div class="category"><a href="#">{{cat}}</a></div>
-                </div>
-                {% endfor %}
+                  <!--<div class="date meta-last">20 May | 2016</div>-->
+                  {% for cat in post.categories.all %}
+                    <div class="category"><a href="#">{{cat}}</a></div>
+                  {% endfor %}
+                </div><a href="{{post.get_absolute_url}}">
                 <h1>{{post.title}}<a href="#"><i class="fa fa-bookmark-o"></i></a></h1>
                 <div class="post-footer d-flex align-items-center flex-column flex-sm-row"><a href="#" class="author d-flex align-items-center flex-wrap">
                     <div class="avatar"><img src="{{post.author.profile_picture.url}}" alt="..." class="img-fluid"></div>
