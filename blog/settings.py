@@ -172,6 +172,4 @@ LANGUAGES = (
     
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'conf/locale'),
-)    
-
-print (LOCALE_PATHS)
+)
