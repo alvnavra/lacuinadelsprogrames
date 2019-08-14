@@ -38,9 +38,38 @@
               <li class="nav-item"><a href="{% url 'post-create' %}" class="nav-link ">Create</a> </li>
               {% endif %}
             </ul>
+            <ul class="dropdown">
+              <a class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Login
+              </a>
+              <div class="dropdown-menu row" aria-labelledby="dropdownMenu2">
+                <div class="amplada-menu">
+                <form class="form" role="form" method="post" action="." accept-charset="UTF-8" id="login-nav">
+                    <div class="form-group">
+											 <label class="sr-only" for="exampleInputEmail2">Email address</label>
+											 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+										</div>
+										<div class="form-group">
+											 <label class="sr-only" for="exampleInputPassword2">Password</label>
+											 <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                             <div><a class="langs navbar-text" href="#" style="font-size:0.7em; text-align:center;">Recuperar contrasenya</a></div>
+										</div>
+										<div class="form-group">
+											 <button type="submit" class="btn btn-success btn-block">Sign in</button>
+										</div>
+										<div class="checkbox">
+											 <label>
+											 <input type="checkbox"> keep me logged-in
+											 </label>
+										</div>
+                </form>
+                </div>
+                </div>
+            </div>         
+
             <div class="navbar-text"><a href="#" class="search-btn"><i class="icon-search-1"></i></a></div>
-            <!--<ul class="langs navbar-text"><a href="#" class="active">EN</a><span>           </span><a href="#">ES</a></ul>-->
+            <ul class="langs navbar-text"><a href="#" class="active">EN</a><span></span><a href="#">ES</a><span></span><a href="#">CAT</a></ul>            
           </div>
-        </div>
+        </div>        
       </nav>
     </header>

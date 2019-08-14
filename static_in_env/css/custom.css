@@ -2,3 +2,9 @@
 .img-card {
     box-shadow: 2px 2px 10px black;
 }
+
+.amplada-menu{
+    width: 12rem;
+    padding:12px;
+    margin:12px;
+}
