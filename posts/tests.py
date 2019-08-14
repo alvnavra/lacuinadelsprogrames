@@ -1,3 +1,3 @@
 from django.test import TestCase
-
-# Create your tests here.
+from django.utils.translation import activate
+from django.urls import reverse

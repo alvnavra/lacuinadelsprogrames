@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-14 12:05+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: blog/settings.py:168
+msgid "English"
+msgstr "Inglés"
+
+#: blog/settings.py:169
+msgid "Catalan"
+msgstr "Catalán"
+
+#: blog/settings.py:170
+msgid "Spanish"
+msgstr "Español"
+
+#: templates/index.html:6
+msgid "La Cuina dels Programes"
+msgstr "La Cocina de los programas"
+
+#: templates/index.html:26
+msgid ""
+"\n"
+"            Sempre m'ha semblat, que contrariament al que sol pensar la "
+"inmensa majoria de la gent, programar \n"
+"            no es una tasca complexa. De fet, <strong>Si saps fregir un ou, "
+"ja tens tot el talent que es necesita per saber programar</strong>\n"
+"            </p>\n"
+"            <p class=\"text-big\">\n"
+"              Això si, com a la cuina, programar requereix bastant de "
+"perserverancia. A vegades et passes hores per aconseguir que un programa\n"
+"              o una pàgina web es comporti com tu vols. Però quan "
+"aconsegueixes la sensació es indescriptible. \n"
+"            </p>\n"
+"            <p class=\"text-big\">\n"
+"              Però per evitar que t'hagis de passar les minimes hores "
+"imprescindibles davant de la pantalla, neix aquest blog. Per que, com\n"
+"              deia Joe Cocker, tot es mes fàcil <strong><i>\"with a little "
+"help of my friends\"</i></strong>\n"
+"            </p>\n"
+"            <p class=\"text-big\">\n"
+"              Em dic Rafael Alvarez i per qualsevol cosa que necessiteu, "
+"només cal que us doneu d'alta i dexeu els vostres comentaris i els\n"
+"              vostres dubtes.\n"
+"            </p>\n"
+"            "
+msgstr ""
+"\n"
+"            Siempre me ha parecido, que contrariamente a lo que suele pensar "
+"la inmensa mayoríaa de la gente, programar \n"
+"            no es una tarea compleja. De hecho, <strong>Si sabes freir un "
+"huevo, ja tienes todo el talento que se necesita para saber programar</"
+"strong>\n"
+"            </p>\n"
+"            <p class=\"text-big\">\n"
+"              Eso si, como en la cocina, programar requiere bastante "
+"perserverancia. A veces te pasas hores para conseguir que un programa\n"
+"              o una página web se comporte com tú quieres. Pero cuando "
+"loconsigues, la sensación es indescriptible. \n"
+"            </p>\n"
+"            <p class=\"text-big\">\n"
+"              Para conseguir que te hayas de passar les menos hores posibles "
+"delante de la pantalla, neix aquest nace este blog. Por que, como\n"
+"              decía Joe Cocker, todo es mes fácil <strong><i>\"with a little "
+"help of my friends\"</i></strong>\n"
+"            </p>\n"
+"            <p class=\"text-big\">\n"
+"              Me llamo Rafael Alvarez y para cualquier cosa que necesites, "
+"solo hace falta que te des de alta y dejes tus comentarios y tus dudas.\n"
+"            </p>\n"
+"            "
