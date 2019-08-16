@@ -1,8 +1,9 @@
 {% load static %}
+{% load i18n %}
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>La cuina dels Programes</title>
+    <title>{{active_blog.title}}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -12,10 +13,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
     <link rel="stylesheet" href="{% static 'vendor/@fancyapps/fancybox/jquery.fancybox.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.default.css' %}" id="theme-stylesheet">
-    <link rel="stylesheet" href="{% static 'css/custom.css' %}">    
-    <link rel="stylesheet" href="{% static 'css/custom.css' %}">    
-    <link rel="shortcut icon" href="{% static '/favicon.png' %}" rel="stylsheet">    
-    <link rel="stylesheet" href="{% static 'styles/github.css' %}">    
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="shortcut icon" href="{% static '/favicon.png' %}" rel="stylsheet">
+    <link rel="stylesheet" href="{% static 'styles/github.css' %}">
     <link rel="stylesheet" href="{% static 'css/prism.css' %}">
     <meta name="title" content="La cuina dels programes">
     <meta name="description" content="Blog en català dedicat a la solució de dubtes i problemes amb Django i Python, així com a la creació de tutorials">
@@ -25,7 +26,7 @@
     <meta name="revisit-after" content="1 days">
     <meta name="author" content="Rafael Alvarez">
 
-    
+
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->

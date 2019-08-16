@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-14 12:05+0200\n"
+"POT-Creation-Date: 2019-08-16 10:43+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,64 +19,52 @@ msgstr ""
 
 #: blog/settings.py:168
 msgid "English"
-msgstr "English"
+msgstr ""
 
 #: blog/settings.py:169
 msgid "Catalan"
-msgstr "Catalan"
+msgstr ""
 
 #: blog/settings.py:170
 msgid "Spanish"
-msgstr "Spanish"
-
-#: templates/index.html:6
-msgid "La Cuina dels Programes"
-msgstr "Program's Kitchen"
-
-#: templates/index.html:26
-msgid ""
-"\n"
-"            Sempre m'ha semblat, que contrariament al que sol pensar la "
-"inmensa majoria de la gent, programar \n"
-"            no es una tasca complexa. De fet, <strong>Si saps fregir un ou, "
-"ja tens tot el talent que es necesita per saber programar</strong>\n"
-"            </p>\n"
-"            <p class=\"text-big\">\n"
-"              Això si, com a la cuina, programar requereix bastant de "
-"perserverancia. A vegades et passes hores per aconseguir que un programa\n"
-"              o una pàgina web es comporti com tu vols. Però quan "
-"aconsegueixes la sensació es indescriptible. \n"
-"            </p>\n"
-"            <p class=\"text-big\">\n"
-"              Però per evitar que t'hagis de passar les minimes hores "
-"imprescindibles davant de la pantalla, neix aquest blog. Per que, com\n"
-"              deia Joe Cocker, tot es mes fàcil <strong><i>\"with a little "
-"help of my friends\"</i></strong>\n"
-"            </p>\n"
-"            <p class=\"text-big\">\n"
-"              Em dic Rafael Alvarez i per qualsevol cosa que necessiteu, "
-"només cal que us doneu d'alta i dexeu els vostres comentaris i els\n"
-"              vostres dubtes.\n"
-"            </p>\n"
-"            "
 msgstr ""
-"\n"
-"It has always seemed to me that, contrary to what the vast majority of "
-"people usually think, make programs is not a complex task.In fact, "
-"<strong>if you know how to fry an egg, you already have all the talent you "
-"need to know how to make programs</strong></p>\n"
-"            <p class=\"text-big\">\n"
-"But, as in the kitchen, programming requires quite perseverance. Sometimes "
-"you spend hours to get a program or a web page to behave as you want. But "
-"when you get the feeling it is indescribable.\n"
-"            </p>\n"
-"            <p class=\"text-big\">\n"
-"But to prevent you from spending many hours in front of the screen, this "
-"blog is born. Because, as Joe Cocker said, everything is easier <strong><i>"
-"\"with a little help of my friends\"</i></strong>\n"
-"            </p>\n"
-"            <p class=\"text-big\">\n"
-"My name is Rafael Alvarez and for whatever you need, just subscribe and "
-"leave your comments and doubts.\n"
-"            </p>\n"
-"            "
+
+#: templates/blog.html:55
+msgid "Search the blog"
+msgstr ""
+
+#: templates/blog.html:59 templates/header.html:14
+msgid "What are you looking for?"
+msgstr ""
+
+#: templates/blog.html:67
+msgid "Latest Posts"
+msgstr ""
+
+#: templates/blog.html:87
+msgid "Categories"
+msgstr ""
+
+#: templates/header.html:33
+msgid "Home"
+msgstr ""
+
+#: templates/header.html:38
+msgid "Contact"
+msgstr ""
+
+#: templates/header.html:41
+msgid "Create"
+msgstr ""
+
+#: templates/index.html:12
+msgid "Baixar"
+msgstr "Down"
+
+#: templates/index.html:116
+msgid "Type your email address"
+msgstr ""
+
+#: templates/index.html:117
+msgid "Subscriu-te"
+msgstr "Subscribe"

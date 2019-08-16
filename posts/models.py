@@ -6,12 +6,40 @@ from django.urls import reverse
 
 User = get_user_model()
 
+class Language(models.Model):
+    LANGUAGE_CHOICES = (('EN','Anglès'),
+                        ('ES','Espanyol'),
+                        ('CA','Català'))
+    llenguatge = models.CharField(max_length=10, choices=LANGUAGE_CHOICES, default='CA')
+
+    def __str__(self):
+        return self.llenguatge
+
+    class Meta:
+        verbose_name_plural = 'Llenguatges'
+
+
 class Author(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     profile_picture = models.ImageField()
 
     def __str__(self):
         return self.user.username
+
+class Blog(models.Model):
+    language = models.ForeignKey(Language, on_delete=models.SET_NULL, blank=True, null=True)
+    title = models.CharField(max_length=100)
+    content = HTMLField('Content') # Texte central
+    overview = models.TextField() # Texto en el separador
+    title_last_posts = models.CharField(max_length=100,default="Title")
+    description_last_posts = models.TextField(default="last posts")
+    title_newsletter = models.CharField(max_length=100, default="title")
+    description_news_letter=models.TextField(default="Newsletter text")
+    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    timestamp = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
 
 class Category(models.Model):
     title = models.CharField(max_length=20)
@@ -24,6 +52,7 @@ class Category(models.Model):
 
 
 class Post(models.Model):
+    blog = models.ForeignKey(Blog, on_delete=models.CASCADE, default=1)
     title = models.CharField(max_length=100)
     overview = models.TextField()
     timestamp = models.DateField(auto_now_add=True)
@@ -52,7 +81,7 @@ class Post(models.Model):
     @property
     def get_comments(self):
         return self.comments.all().order_by('-timestamp')
-    
+
 class Comment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     timestamp = models.DateTimeField(auto_now_add=True)
@@ -60,4 +89,4 @@ class Comment(models.Model):
     post = models.ForeignKey(Post, related_name='comments', on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.user.username        
+        return self.user.username

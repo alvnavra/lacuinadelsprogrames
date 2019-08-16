@@ -13,7 +13,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '7zneg#6x=ev^5f2p91b-4+&%^$b+=p1mx4enklwc17_-h=(m1%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 #DEBUG = True
 ALLOWED_HOSTS = ['www.lacuinadelsprogrames.cat','alvnavra.pythonanywhere.com','localhost']
 
@@ -141,7 +141,7 @@ TINYMCE_DEFAULT_CONFIG = {
         {'text': 'C', 'value': 'c'},
         {'text': 'C#', 'value': 'csharp'},
         {'text': 'C++', 'value': 'cpp'}
-    ],    
+    ],
     'plugins': '''
             textcolor save link image media preview codesample contextmenu
             table code lists fullscreen  insertdatetime  nonbreaking
@@ -157,7 +157,7 @@ TINYMCE_DEFAULT_CONFIG = {
             ''',
     'toolbar2': '''
             visualblocks visualchars |
-            charmap hr pagebreak nonbreaking anchor |  code 
+            charmap hr pagebreak nonbreaking anchor |  code
             ''',
     'contextmenu': 'formats | link image',
     'menubar': True,
@@ -169,7 +169,7 @@ LANGUAGES = (
     ('ca', _('Catalan')),
     ('es', _('Spanish')),
 )
-    
+
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'conf/locale'),
 )

@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 {% block content%}
+{% load i18n %}
 {% load static %}
      <div class="container">
       <div class="row">
         <!-- Latest Posts -->
-        <main class="posts-listing col-lg-8"> 
+        <main class="posts-listing col-lg-8">
           <div class="container">
             <div class="row">
               <!-- post -->
@@ -30,8 +31,8 @@
                     <div class="comments meta-last"><i class="icon-comment"></i>{{post.comments_count}}</div>
                   </footer>
                 </div>
-              </div>  
-              {% endfor %}           
+              </div>
+              {% endfor %}
             </div>
             <!-- Pagination -->
             <nav aria-label="Page navigation example">
@@ -51,11 +52,11 @@
           <!-- Widget [Search Bar Widget]-->
           <div class="widget search">
             <header>
-              <h3 class="h6">Search the blog</h3>
+              <h3 class="h6">{% trans "Search the blog"%}</h3>
             </header>
             <form action="{% url 'search' %}" class="search-form">
               <div class="form-group">
-                <input type="text" name="q" placeholder="What are you looking for?">
+                <input type="search" name="q" placeholder="{% trans 'What are you looking for?'%}">
                 <button type="submit" class="submit"><i class="icon-search"></i></button>
               </div>
             </form>
@@ -63,7 +64,7 @@
           <!-- Widget [Latest Posts Widget]        -->
           <div class="widget latest-posts">
             <header>
-              <h3 class="h6">Latest Posts</h3>
+              <h3 class="h6">{% trans "Latest Posts"%}</h3>
             </header>
             <div class="blog-posts">
             {% for post in most_recent  %}
@@ -83,7 +84,7 @@
           <!-- Widget [Categories Widget]-->
           <div class="widget categories">
             <header>
-              <h3 class="h6">Categories</h3>
+              <h3 class="h6">{%trans "Categories"%}</h3>
             </header>
             {% for cat in category_count %}
             <div class="item d-flex justify-content-between"><a href="#">{{cat.categories__title}}</a><span>{{cat.categories__count}}</span></div>

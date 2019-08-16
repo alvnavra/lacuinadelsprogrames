@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-14 12:05+0200\n"
+"POT-Creation-Date: 2019-08-16 10:43+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,58 +29,42 @@ msgstr "Catalán"
 msgid "Spanish"
 msgstr "Español"
 
-#: templates/index.html:6
-msgid "La Cuina dels Programes"
-msgstr "La Cocina de los programas"
+#: templates/blog.html:55
+msgid "Search the blog"
+msgstr "Busca en el blog"
 
-#: templates/index.html:26
-msgid ""
-"\n"
-"            Sempre m'ha semblat, que contrariament al que sol pensar la "
-"inmensa majoria de la gent, programar \n"
-"            no es una tasca complexa. De fet, <strong>Si saps fregir un ou, "
-"ja tens tot el talent que es necesita per saber programar</strong>\n"
-"            </p>\n"
-"            <p class=\"text-big\">\n"
-"              Això si, com a la cuina, programar requereix bastant de "
-"perserverancia. A vegades et passes hores per aconseguir que un programa\n"
-"              o una pàgina web es comporti com tu vols. Però quan "
-"aconsegueixes la sensació es indescriptible. \n"
-"            </p>\n"
-"            <p class=\"text-big\">\n"
-"              Però per evitar que t'hagis de passar les minimes hores "
-"imprescindibles davant de la pantalla, neix aquest blog. Per que, com\n"
-"              deia Joe Cocker, tot es mes fàcil <strong><i>\"with a little "
-"help of my friends\"</i></strong>\n"
-"            </p>\n"
-"            <p class=\"text-big\">\n"
-"              Em dic Rafael Alvarez i per qualsevol cosa que necessiteu, "
-"només cal que us doneu d'alta i dexeu els vostres comentaris i els\n"
-"              vostres dubtes.\n"
-"            </p>\n"
-"            "
-msgstr ""
-"\n"
-"            Siempre me ha parecido, que contrariamente a lo que suele pensar "
-"la inmensa mayoríaa de la gente, programar \n"
-"            no es una tarea compleja. De hecho, <strong>Si sabes freir un "
-"huevo, ja tienes todo el talento que se necesita para saber programar</"
-"strong>\n"
-"            </p>\n"
-"            <p class=\"text-big\">\n"
-"              Eso si, como en la cocina, programar requiere bastante "
-"perserverancia. A veces te pasas hores para conseguir que un programa\n"
-"              o una página web se comporte com tú quieres. Pero cuando "
-"loconsigues, la sensación es indescriptible. \n"
-"            </p>\n"
-"            <p class=\"text-big\">\n"
-"              Para conseguir que te hayas de passar les menos hores posibles "
-"delante de la pantalla, neix aquest nace este blog. Por que, como\n"
-"              decía Joe Cocker, todo es mes fácil <strong><i>\"with a little "
-"help of my friends\"</i></strong>\n"
-"            </p>\n"
-"            <p class=\"text-big\">\n"
-"              Me llamo Rafael Alvarez y para cualquier cosa que necesites, "
-"solo hace falta que te des de alta y dejes tus comentarios y tus dudas.\n"
-"            </p>\n"
-"            "
+#: templates/blog.html:59 templates/header.html:14
+msgid "What are you looking for?"
+msgstr "Que estás buscando?"
+
+#: templates/blog.html:67
+msgid "Latest Posts"
+msgstr "Últimos Posts"
+
+#: templates/blog.html:87
+msgid "Categories"
+msgstr "Categorías"
+
+#: templates/header.html:33
+msgid "Home"
+msgstr "Inicio"
+
+#: templates/header.html:38
+msgid "Contact"
+msgstr "Contactar"
+
+#: templates/header.html:41
+msgid "Create"
+msgstr "Crear"
+
+#: templates/index.html:12
+msgid "Baixar"
+msgstr "Bajar"
+
+#: templates/index.html:116
+msgid "Type your email address"
+msgstr "Introduce tu email"
+
+#: templates/index.html:117
+msgid "Subscriu-te"
+msgstr "Suscríbete"

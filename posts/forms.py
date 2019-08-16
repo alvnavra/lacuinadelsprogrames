@@ -14,7 +14,7 @@ class PostForm(forms.ModelForm):
         fields = ('title', 'overview','content','thumbnal','categories','featured','previous_post','next_post')
 
 class CommentForm(forms.ModelForm):
-    
+
     content = forms.CharField(widget=forms.Textarea(attrs={
         'class':'form-control',
         'placeholder':'Type your comment',
