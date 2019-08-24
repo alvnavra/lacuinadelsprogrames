@@ -7,7 +7,7 @@ from filebrowser.sites import site
 from django.urls import path, include
 from django.conf.urls import url
 
-from posts.views import index, blog, post, search, post_update, post_delete, post_create
+from posts.views import index, blog, post, search, post_update, post_delete, post_create, categories
 
 from django.conf.urls.i18n import i18n_patterns
 
@@ -23,6 +23,7 @@ urlpatterns = i18n_patterns(
     path('', index),
     path('blog/',  blog, name='post-list'),
     path('search/', search, name='search'),
+    path('categories/<id>/', categories, name='categories'),
     path('create/',  post_create, name='post-create'),
     path('post/<id>/',  post, name='post-detail'),
     path('post/<id>/update/',  post_update, name='post-update'),
