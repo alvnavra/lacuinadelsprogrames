@@ -45,9 +45,6 @@ def search(request):
 
     return render(request, 'search_result.html',context)
 
-def return_hola(path):
-    return path
-
 def get_language_classes():
 
     active_classes = ['','','']
@@ -62,7 +59,6 @@ def get_language_classes():
             active_classes[0] = active_str
 
     context = {
-    'urls':return_hola,
     'active_en':active_classes[0],
     'active_es':active_classes[1],
     'active_ca':active_classes[2],
