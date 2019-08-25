@@ -176,3 +176,6 @@ LANGUAGES = (
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'conf/locale'),
 )
+
+FILEBROWSER_DIRECTORY = ''
+DIRECTORY = ''
