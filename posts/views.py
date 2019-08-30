@@ -93,33 +93,6 @@ def categories(request,id):
         "category_count":category_count,
     }
 
-    '''if query:
-        queryset = queryset.filter(blog=blog).filter(
-            Q(title__icontains=query) |
-            Q(overview__icontains=query)|
-            Q(content__icontains=query)
-        ).distinct()
-
-        paginator = Paginator(queryset,4)
-        page_request_var = 'page'
-        page = request.GET.get(page_request_var)
-
-        try:
-            paginated_queryset = paginator.page(page)
-        except PageNotAnInteger:
-            paginated_queryset = paginator.page(1)
-        except EmptyPage:
-            paginated_queryset = paginator.page(paginator.num_pages())
-
-
-    context = {
-        "active_classes": get_language_classes(),
-        "queryset":paginated_queryset,
-        "most_recent": most_recent,
-        "page_request_var":page_request_var,
-        "category_count":category_count,
-    }'''
-
 
     return render(request, 'blog.html',context)
 
@@ -168,7 +141,7 @@ def blog(request):
     category_count = get_category_count(blog)
     most_recent = Post.objects.filter(blog=blog).filter(featured=True).order_by('-timestamp')[:3]
     post_list = Post.objects.filter(blog=blog).filter(featured=True)
-    paginator = Paginator(post_list, 3)
+    paginator = Paginator(post_list, 4)
     page_request_var = 'page'
     page = request.GET.get(page_request_var)
     try:
