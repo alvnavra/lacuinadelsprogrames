@@ -93,10 +93,7 @@ def categories(request,id):
         "category_count":category_count,
     }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> master
     return render(request, 'blog.html',context)
 
 def get_language_classes():
