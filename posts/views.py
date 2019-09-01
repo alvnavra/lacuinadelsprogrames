@@ -1,4 +1,4 @@
-from django.db.models import Count, Q
+from django.db.models import Count, Q, F
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from .models import Post, Author, Blog, Language, Category
@@ -93,34 +93,6 @@ def categories(request,id):
         "category_count":category_count,
     }
 
-    '''if query:
-        queryset = queryset.filter(blog=blog).filter(
-            Q(title__icontains=query) |
-            Q(overview__icontains=query)|
-            Q(content__icontains=query)
-        ).distinct()
-
-        paginator = Paginator(queryset,4)
-        page_request_var = 'page'
-        page = request.GET.get(page_request_var)
-
-        try:
-            paginated_queryset = paginator.page(page)
-        except PageNotAnInteger:
-            paginated_queryset = paginator.page(1)
-        except EmptyPage:
-            paginated_queryset = paginator.page(paginator.num_pages())
-
-
-    context = {
-        "active_classes": get_language_classes(),
-        "queryset":paginated_queryset,
-        "most_recent": most_recent,
-        "page_request_var":page_request_var,
-        "category_count":category_count,
-    }'''
-
-
     return render(request, 'blog.html',context)
 
 def get_language_classes():
@@ -189,6 +161,9 @@ def blog(request):
 def post(request, id):
     blog = get_blog()
     post = get_object_or_404(Post, id=id)
+    post.view_count = F('view_count')+1
+    post.save()
+    post.refresh_from_db()
     most_recent = most_recent = Post.objects.filter(blog=blog).filter(featured=True).order_by('-timestamp')[:3]
     category_count = get_category_count(blog)
     comment_form = CommentForm(request.POST or None)

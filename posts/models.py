@@ -59,7 +59,7 @@ class Post(models.Model):
     timestamp = models.DateField(auto_now_add=True)
     content = HTMLField('Content')
     comments_count = models.IntegerField(default=0)
-    view_count = models.IntegerField(default=0)
+    view_count = models.PositiveIntegerField(default=0)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     thumbnal = models.ImageField()
     categories = models.ManyToManyField(Category)
