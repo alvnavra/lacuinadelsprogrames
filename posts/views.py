@@ -93,6 +93,10 @@ def categories(request,id):
         "category_count":category_count,
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
     return render(request, 'blog.html',context)
 
 def get_language_classes():
@@ -140,7 +144,7 @@ def blog(request):
     category_count = get_category_count(blog)
     most_recent = Post.objects.filter(blog=blog).filter(featured=True).order_by('-timestamp')[:3]
     post_list = Post.objects.filter(blog=blog).filter(featured=True)
-    paginator = Paginator(post_list, 3)
+    paginator = Paginator(post_list, 4)
     page_request_var = 'page'
     page = request.GET.get(page_request_var)
     try:
